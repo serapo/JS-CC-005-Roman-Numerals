@@ -1,5 +1,4 @@
-let rakamlar ={
-    
+let rakamlar ={    
     "1":"I",
     "2":"II",
     "3":"III",
@@ -33,10 +32,11 @@ let rakamlar ={
 
 };
 
-const number="12";
+const number=prompt("Enter a number");
 
 // const arr=number.split("");
-
+// arr[0]=10
+// arr[1]=2
 // console.log(arr[0]);
 // console.log(arr[1]);
 
@@ -45,10 +45,33 @@ let liste=[];
 if(number>0 && number<=3000){
    arr=number.split("");
    if(arr.length==2){
-     
+     liste.push(rakamlar[arr[1]]);
+     let ekleme=arr[0];
+     let deger=ekleme+"0"; //10
+     liste.push(rakamlar[deger])
+   }
+   else if(arr.length==3){
+    liste.push(rakamlar[arr[2]]);
+    liste.push(rakamlar[arr[1]+"0"]);
+    liste.push(rakamlar[arr[0]+"00"]);
+   }
+   else if(arr.length==4){
+    liste.push(rakamlar[arr[3]]);
+    liste.push(rakamlar[arr[2]+"0"]);    
+    liste.push(rakamlar[arr[1]+"00"]);
+    liste.push(rakamlar[arr[0]+"000"]);
+   }
+   else if(arr.length==1){
+       liste.push(rakamlar[arr[0]]);
    }
 
 }
+else {
+    alert("1 ile 3000 arasında sayı giriniz");
+}
+liste.reverse();
+console.log(liste.join(''));
 
-console.log(rakamlar[arr[0]]);
-console.log(rakamlar[arr[1]]);
+
+// console.log(rakamlar[arr[0]]);
+// console.log(rakamlar[arr[1]]);
