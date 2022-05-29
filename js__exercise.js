@@ -68,7 +68,8 @@ else {
     alert("1 ile 3000 arasında sayı giriniz");
 }
 liste.reverse();
-console.log(liste.join(''));
+let sonuc=liste.join('');
+console.log(`Girilen değer ${number} Roma rakamları karşılığı ${sonuc}`);
 
 
 // console.log(rakamlar[arr[0]]);
