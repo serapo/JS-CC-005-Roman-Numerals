@@ -46,9 +46,7 @@ if(number>0 && number<=3000){
    arr=number.split("");
    if(arr.length==2){
      liste.push(rakamlar[arr[1]]);
-     let ekleme=arr[0];
-     let deger=ekleme+"0"; //10
-     liste.push(rakamlar[deger])
+     liste.push(rakamlar[arr[0]+"0"])
    }
    else if(arr.length==3){
     liste.push(rakamlar[arr[2]]);
